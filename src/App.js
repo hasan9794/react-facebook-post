@@ -26,6 +26,8 @@ function App() {
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQZAP37ISz6Hh9l-9g71FwE4aYKw0rWpaVOiEtRsjO7c3Fmg-',
     'https://secure.i.telegraph.co.uk/multimedia/archive/03350/gardening-music_3350010b.jpg',
     'https://secure.i.telegraph.co.uk/multimedia/archive/03350/gardening-music_3350010b.jpg',
+    'https://secure.i.telegraph.co.uk/multimedia/archive/03350/gardening-music_3350010b.jpg',
+    'https://secure.i.telegraph.co.uk/multimedia/archive/03350/gardening-music_3350010b.jpg',
     
   ]
   return (

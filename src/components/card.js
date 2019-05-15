@@ -52,20 +52,17 @@ class RecipeReviewCard extends React.Component {
     this.setState(state => ({ expanded: !state.expanded }));
   };
 
-  showEmojis(){
-      this.setState({emojis: true})
-      
+  showEmojis(e){
+      this.setState({emojis: !this.state.emojis})
     }
     
-    hideEmojis(){
+    hideEmojis(e){
       this.setState({emojis: false})
-      console.log(this)
-      
   }
 
   render() {
     const { classes } = this.props;
-
+    const {emojis} = this.state
     return (
       <Card className={classes.card}>
         <CardHeader
@@ -92,17 +89,36 @@ class RecipeReviewCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          
+              
+        </CardActions>
+        <CardActions className={classes.actions} disableActionSpacing>
           <IconButton aria-label="Add to favorites">
-               { this.state.emojis && <div>
-                  <FacebookEmoji type="like"/>
-               </div> 
-              }
               <div></div>
               <div>
-               {<button onMouseOver={this.showEmojis.bind(this)} onMouseOut={this.hideEmojis.bind(this)} >React</button>}
+               {/* {<img src="/images/thumb-up-hand-vector_20448-100.jpg" style={{margin:0, padding:0}} onMouseEnter={this.showEmojis.bind(this)} onMouseLeave={this.hideEmojis.bind(this)} />} */}
               </div> 
-              {/* <FavoriteIcon /> */}
+              <span style={{margin:0, padding:0}} onMouseEnter={this.showEmojis.bind(this)} onMouseLeave={this.hideEmojis.bind(this)}>
+              {emojis && 
+                  <div style={{
+                  margin: 0, 
+                  padding: 0 , 
+                  bottom: "7%",
+                  position: "absolute",
+                  padding: "5px 10px",
+                  borderRadius: "50px",
+                  background: "#fafafa",
+                  boxShadow: "1px 1px 5px grey"}}>
+                      <FacebookEmoji size="sm" type="like"/>
+                      <FacebookEmoji size="sm" type="love"/>
+                      <FacebookEmoji size="sm" type="wow"/>
+                      <FacebookEmoji size="sm" type="yay"/>
+                      <FacebookEmoji size="sm" type="angry"/>
+                      <FacebookEmoji size="sm" type="haha"/>
+                      <FacebookEmoji size="sm" type="sad"/>
+               </div> 
+              }
+              <FavoriteIcon />
+              </span>
           </IconButton>
           <IconButton aria-label="Share">
             <ShareIcon />

@@ -68,7 +68,7 @@ class RecipeReviewCard extends React.Component {
         <CardHeader
           avatar={
             <Avatar aria-label="Recipe" className={classes.avatar}>
-              <img style={{width: 50}} src={this.props.profileImage} />
+              <img style={{width: 50}} src={this.props.avatar} />
             </Avatar>
           }
           action={
@@ -76,8 +76,8 @@ class RecipeReviewCard extends React.Component {
               <MoreVertIcon />
             </IconButton>
           }
-          title={this.props.title}
-          subheader={this.props.date}
+          title={this.props.createdBy}
+          subheader={this.props.createdAt}
         />
         <FbImageLibrary 
             images={this.props.images}

@@ -89,11 +89,10 @@ class RecipeReviewCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-              
-        </CardActions>
-        <CardActions className={classes.actions} disableActionSpacing>
+        <CardContent>
+              <p style={{fontSize: 11, color: "#8a8a8a"}}>Hasan, Bial and 23 Others liked this</p>      
+        </CardContent>  
           <IconButton aria-label="Add to favorites">
-              <div></div>
               <div>
                {/* {<img src="/images/thumb-up-hand-vector_20448-100.jpg" style={{margin:0, padding:0}} onMouseEnter={this.showEmojis.bind(this)} onMouseLeave={this.hideEmojis.bind(this)} />} */}
               </div> 
